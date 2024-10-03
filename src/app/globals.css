@@ -33,6 +33,20 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.light {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+
+.dark {
+  background-color: #444444;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -134,4 +148,101 @@ body {
 
 .toggleButton:active {
   transform: scale(0.95);
+}
+
+/* Header css */
+
+.header {
+  width: 100%;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styles */
+
+.header.light {
+  background-color: #a7ead9;
+  color: #333333;
+}
+
+.header.light .header-nav-link {
+  color: #333333;
+}
+
+.header.light .header-nav-link:hover {
+  color: #0070f3;
+}
+
+/* Dark Mode Styles */
+
+.header.dark {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.header.dark .header-nav-link {
+  color: #ffffff;
+}
+
+.header.dark .header-nav-link:hover {
+  color: #0070f3;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.header-logo-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://wallpapers.com/images/hd/food-delivery-green-poster-oi97lp6ogs4prjzx.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container.light {
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0.9;
+}
+
+.container.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.toggleButton,
+.themeToggleButton {
+  margin-top: 10px;
 }
