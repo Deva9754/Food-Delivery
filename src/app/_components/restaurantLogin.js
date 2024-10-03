@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const RestaurantLogin = () => {
+const RestaurantLogin = ({ isDarkMode }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,8 +13,11 @@ const RestaurantLogin = () => {
   return (
     <div className="login-container">
       <h3> RestaurantLogin </h3>{" "}
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="form-group">
+      <form
+        onSubmit={handleSubmit}
+        className={isDarkMode ? "form dark" : "form light"}
+      >
+        <div className="formGroup">
           <label htmlFor="email"> Email: </label>{" "}
           <input
             type="email"
@@ -22,10 +25,10 @@ const RestaurantLogin = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="input-field"
+            className="inputField"
           />
         </div>{" "}
-        <div className="form-group">
+        <div className="formGroup">
           <label htmlFor="password"> Password: </label>{" "}
           <input
             type="password"
@@ -33,11 +36,11 @@ const RestaurantLogin = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="input-field"
+            className="inputField"
           />
         </div>{" "}
-        <button type="submit" className="submit-button">
-          Login{" "}
+        <button type="submit" className="submitButton">
+          Log In{" "}
         </button>{" "}
       </form>{" "}
     </div>
